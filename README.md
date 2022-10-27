@@ -2,6 +2,33 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
+# Application Details
+
+This application is going to handle 3 sections:
+  1. Login
+  2. List of Companies
+  3. List of Products per Company
+
+## Information of a User
+- Name
+- Email
+- Password
+
+## Information of a Company
+- Name (required, max 100 characters)
+- Address (required, max 500 characters)
+- NIT (required, search) [Primary Key in DB]
+- Phone (required only numbers)
+
+For now is global and not oriented to be a SAAS is NOT NEEDED add any relation with USER
+
+## Information of a Product
+- Product Name
+- Quantity
+- Foreign Key (NIT of Company)
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
