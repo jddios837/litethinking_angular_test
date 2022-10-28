@@ -51,5 +51,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'litethinkingwebapp'
-          publish-profile: $
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B05724FCE7EC448EBA40DA165B96CC4C }}
           package: ./dist/lite-thinking-fe
