@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Company} from "../company";
+import {CompanyService} from "../company.service";
 
 @Component({
   selector: 'app-companies',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./companies.component.scss']
 })
 export class CompaniesComponent implements OnInit {
+  companies: Company[] = [];
 
-  constructor() { }
+  constructor(public companyService: CompanyService) { }
 
   ngOnInit(): void {
+    this.companyService.getAll().subscribe((data: Company[]) => {
+      this.companies = data;
+      console.log(data);
+    });
   }
 
 }
