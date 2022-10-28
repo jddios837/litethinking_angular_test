@@ -1,0 +1,69 @@
+<h1>Create New Post</h1>
+
+<a href="#" routerLink="/company/list" class="btn btn-primary">Back</a>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <div class="form-group">
+    <label for="nit">Nit:</label>
+    <input
+      formControlName="nit"
+      id="nit"
+      type="text"
+      class="form-control">
+    <div *ngIf="f['nit'].touched && f['nit'].invalid" class="alert alert-danger">
+      <div *ngIf="f['nit'].errors && f['nit'].errors['required']">Nit is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      formControlName="name"
+      id="name"
+      type="text"
+      class="form-control">
+    <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+      <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="name">Address:</label>
+    <input
+      formControlName="address"
+      id="address"
+      type="text"
+      class="form-control">
+    <div *ngIf="f['address'].touched && f['address'].invalid" class="alert alert-danger">
+      <div *ngIf="f['address'].errors && f['address'].errors['required']">Name is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input
+      formControlName="phone"
+      id="phone"
+      type="number"
+      class="form-control">
+    <div *ngIf="f['phone'].touched && f['phone'].invalid" class="alert alert-danger">
+      <div *ngIf="f['phone'].errors && f['phone'].errors['required']">Phone is required.</div>
+    </div>
+  </div>
+
+<!--  <div class="form-group">-->
+<!--    <label for="body">Body</label>-->
+<!--    <textarea-->
+<!--      formControlName="body"-->
+<!--      id="body"-->
+<!--      type="text"-->
+<!--      class="form-control">-->
+<!--            </textarea>-->
+<!--    <div *ngIf="f['body'].touched && f['body'].invalid" class="alert alert-danger">-->
+<!--      <div *ngIf="f['body'].errors && f['body'].errors['required']">Body is required.</div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+</form>

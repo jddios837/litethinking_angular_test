@@ -19,4 +19,9 @@ export class CompaniesComponent implements OnInit {
     });
   }
 
+  deleteCompany(nit: string) {
+    this.companyService.delete(nit).subscribe(res => {
+      this.companies = this.companies.filter(item => item.nit !== nit);
+    });
+  }
 }

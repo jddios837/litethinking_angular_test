@@ -1,3 +1,7 @@
+<h1>Company List</h1>
+
+<a href="#" routerLink="/company/create/" class="btn btn-success">Create New Company</a>
+
 <table class="table table-striped">
   <thead>
   <tr>
@@ -7,13 +11,13 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let post of companies">
-    <td>{{ post.nit }}</td>
-    <td>{{ post.name }}</td>
+  <tr *ngFor="let c of companies">
+    <td>{{ c.nit }}</td>
+    <td>{{ c.name }}</td>
     <td>
-<!--      <a href="#" [routerLink]="['/post/', post.id, 'view']" class="btn btn-info">View</a>-->
-<!--      <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a>-->
-<!--      <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>-->
+      <a href="#" [routerLink]="['/company/', c.nit, 'view']" class="btn btn-info">View</a>
+      <a href="#" [routerLink]="['/company/', c.nit, 'edit']" class="btn btn-primary">Edit</a>
+      <button type="button" (click)="deleteCompany(c.nit)" class="btn btn-danger">Delete</button>
     </td>
   </tr>
   </tbody>
