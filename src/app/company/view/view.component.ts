@@ -10,7 +10,12 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ViewComponent implements OnInit {
   id!: string;
-  company!: Company;
+  company: Company = {
+    nit: '',
+    name: '',
+    address: '',
+    phone: 0
+  };
 
   constructor(
     public companyService: CompanyService,
