@@ -28,6 +28,13 @@ export class CompanyService {
       )
   }
 
+  find(id: string): Observable<any> {
+    return this.http.get(this.apiURL + '/company/' + id)
+      .pipe(
+        catchError(this.errorHandler)
+      )
+  }
+
   create(company: Company): Observable<any> {
     return this.http.post(this.apiURL + '/company/', JSON.stringify(company), this.httpOptions)
       .pipe(

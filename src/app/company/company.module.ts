@@ -6,11 +6,15 @@ import {CompanyRoutingModule} from "./company-routing.module";
 import { CompaniesComponent } from './companies/companies.component';
 import { CreateComponent } from './create/create.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { EditComponent } from './edit/edit.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
     CompaniesComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent,
+    ViewComponent
   ],
   imports: [
     CommonModule,

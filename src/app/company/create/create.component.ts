@@ -24,8 +24,8 @@ export class CreateComponent implements OnInit {
     // phone: number;
     this.form = new FormGroup({
       nit: new FormControl('', [Validators.required]),
-      name: new FormControl('', [Validators.required]),
-      address: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required, Validators.min(3), Validators.max(100) ]),
+      address: new FormControl('', [Validators.required, Validators.min(3), Validators.max(500)]),
       phone: new FormControl('', [Validators.required, Validators.pattern('')]),
     });
   }

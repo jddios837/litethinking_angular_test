@@ -15,8 +15,8 @@
     <td>{{ c.nit }}</td>
     <td>{{ c.name }}</td>
     <td>
-      <a href="#" [routerLink]="['/company/', c.nit, 'view']" class="btn btn-info">View</a>
-      <a href="#" [routerLink]="['/company/', c.nit, 'edit']" class="btn btn-primary">Edit</a>
+      <a href="#" [routerLink]="['/company/', c.nit, 'view']" class="btn btn-info me-2">View</a>
+      <a href="#" [routerLink]="['/company/', c.nit, 'edit']" class="btn btn-primary me-2">Edit</a>
       <button type="button" (click)="deleteCompany(c.nit)" class="btn btn-danger">Delete</button>
     </td>
   </tr>
